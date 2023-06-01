@@ -70,7 +70,7 @@ export const LockScreen = (props) => {
   const wall = useSelector((state) => state.wallpaper);
   const [lock, setLock] = useState(false);
   const [unlocked, setUnLock] = useState(false);
-  const [password, setPass] = useState("");
+  const [password, setPass] = useState("solve");
   const [passType, setType] = useState(1);
   const [forgot, setForget] = useState(false);
   const dispatch = useDispatch();
@@ -109,7 +109,7 @@ export const LockScreen = (props) => {
   };
 
   return (
-    <div
+    <><div
       className={"lockscreen " + (props.dir == -1 ? "slowfadein" : "")}
       data-unlock={unlocked}
       style={{
@@ -140,37 +140,34 @@ export const LockScreen = (props) => {
           className="rounded-full overflow-hidden"
           src="img/asset/prof.jpg"
           w={200}
-          ext
-        />
+          ext />
         <div className="mt-2 text-2xl font-medium text-gray-200">
           {userName}
         </div>
         <div className="flex items-center mt-6 signInBtn" onClick={proceed}>
           Sign in
         </div>
-        {/*   <input type={passType?"text":"password"} value={password} onChange={action}
-              data-action="inpass" onKeyDown={action2} placeholder={passType?"Password":"PIN"}/>
-          <Icon className="-ml-6 handcr" fafa="faArrowRight" width={14}
-            color="rgba(170, 170, 170, 0.6)" onClick={proceed}/>
-        </div>
-        <div className="text-xs text-gray-400 mt-4 handcr"
-          onClick={proceed}>
-          {!forgot?`I forgot my ${passType?"password":"pin"}`:"Not my problem"}
-        </div>
-        <div className="text-xs text-gray-400 mt-6">
-          Sign-in options
-        </div>
-        <div className="lockOpt flex">
-          <Icon src="pinlock" onClick={action} ui width={36}
-            click="pinlock" payload={passType==0}/>
-          <Icon src="passkey" onClick={action} ui width={36}
-            click="passkey" payload={passType==1}/>
-        </div> */}
+        <input type={passType ? "text" : "password"} value={password} onChange={action}
+          data-action="inpass" onKeyDown={action2} placeholder={passType ? "Password" : "PIN"} />
+        <Icon className="-ml-6 handcr" fafa="faArrowRight" width={14}
+          color="rgba(170, 170, 170, 0.6)" onClick={proceed} />
       </div>
-      <div className="bottomInfo flex">
+      <div className="text-xs text-gray-400 mt-4 handcr"
+        onClick={proceed}>
+        {!forgot ? `I forgot my ${passType ? "password" : "pin"}` : "Not my problem"}
+      </div>
+      <div className="text-xs text-gray-400 mt-6">
+        Sign-in options
+      </div>
+      <div className="lockOpt flex">
+        <Icon src="pinlock" onClick={action} ui width={36}
+          click="pinlock" payload={passType == 0} />
+        <Icon src="passkey" onClick={action} ui width={36}
+          click="passkey" payload={passType == 1} />
+      </div>
+    </div><div className="bottomInfo flex">
         <Icon className="mx-2" src="wifi" ui width={16} invert />
         <Battery invert />
-      </div>
-    </div>
+      </div></>
   );
 };
