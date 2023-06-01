@@ -148,7 +148,7 @@ export const LockScreen = (props) => {
         <div className="flex items-center mt-6 signInBtn" onClick={proceed}>
           Sign in
         </div>
-        { /*   <input type={passType?"text":"password"} value={password} onChange={action}
+        {/*   <input type={passType?"text":"password"} value={password} onChange={action}
               data-action="inpass" onKeyDown={action2} placeholder={passType?"Password":"PIN"}/>
           <Icon className="-ml-6 handcr" fafa="faArrowRight" width={14}
             color="rgba(170, 170, 170, 0.6)" onClick={proceed}/>
