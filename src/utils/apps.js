@@ -232,7 +232,7 @@ const apps = [
     action: "EXTERNAL",
     payload: "https://twitter.com/solveXcoin",
   },
-  {
+  /*{
     name: "Telegram",
     icon: "telegram",
     type: "app",
@@ -245,7 +245,7 @@ const apps = [
     type: "app",
     action: "EXTERNAL",
     payload: "https://etherscan.io",
-  },
+  },*/
   {
     name: "Presale",
     icon: "presale",
