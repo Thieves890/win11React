@@ -52,17 +52,7 @@ export const AboutWin = () => {
         </p>
 
         <p>{t("about.notmicrosoft")}</p>
-        <p>
-          {t("about.alsonot")}&nbsp;
-          <a
-            target="_blank"
-            href="https://www.microsoft.com/en-in/windows-365"
-            rel="noreferrer"
-          >
-            Windows 365 cloud PC
-          </a>
-          .
-        </p>
+       
         <p>{t("about.microsoftcopywrite")}.</p>
       </div>
       <div className="okbtn px-6 py-4">
