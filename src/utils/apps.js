@@ -251,7 +251,7 @@ const apps = [
     icon: "presale",
     type: "app",
     action: "EXTERNAL",
-    payload: "https://twitter.com/intent/tweet?text=Challenge%20%24olved.%20Thank%20you%20%40SolveXCoin%20for%20this%20opportunity%20%F0%9F%9A%80",
+    payload: "https://twitter.com/intent/tweet?text=I%20%24olved%20The%20Challenge!%20%40SolveXcoin%20wen%20Airdrop%20%F0%9F%91%80%0A%0Ahttps%3A%2F%2Ftwitter.com%2FCHALLENGER09876%2Fstatus%2F1666529434168356865%2Fphoto%2F1",
   },
   {
     name: "Teams",
